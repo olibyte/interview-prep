@@ -137,3 +137,28 @@ Here's a step-by-step example of how to add a new feature following our Git Flow
 This process ensures that new features are properly integrated into both the `develop` and `main` branches, following our established workflow.
 
 For more detailed contribution guidelines for external contributors, please refer to CONTRIBUTING.md.
+
+## Branch Protection and Maintenance
+
+To maintain the integrity of our development process and prevent accidental loss of work, we implement the following practices:
+
+1. Branch Protection Rules:
+   - Both `main` and `develop` branches are protected on GitHub.
+   - Direct pushes to these branches are not allowed.
+   - All changes must go through Pull Requests.
+   - Pull Requests require at least one review before merging.
+
+2. Preserving the `develop` Branch:
+   - The `develop` branch is crucial to our Git Flow process.
+   - Never delete the `develop` branch, either locally or on GitHub.
+   - If `develop` is accidentally deleted:
+     a. Recreate it from the latest `main`: `git checkout -b develop main`
+     b. Push it to GitHub: `git push -u origin develop`
+     c. Re-establish branch protection rules on GitHub
+
+3. Regular Maintenance:
+   - Keep your local branches up to date: `git fetch --all --prune`
+   - Regularly prune merged feature branches.
+   - Ensure `develop` is always up to date with `main` after hotfixes.
+
+Remember: Our branching strategy is key to smooth collaboration. When in doubt about Git operations, especially those affecting `main` or `develop`, consult with the team lead or refer to this guide.
