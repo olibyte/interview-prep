@@ -1,7 +1,61 @@
 # Development Guide
 
-This document outlines the development practices and repository structure for the Interview Prep project.
+## Development Workflow
 
+1. Create a new feature branch from `develop`:
+   ```
+   git checkout develop
+   git pull origin develop
+   git checkout -b feature/your-feature-name
+   ```
+
+2. Make your changes, committing regularly with clear, concise commit messages.
+
+3. Push your feature branch to GitHub:
+   ```
+   git push -u origin feature/your-feature-name
+   ```
+
+4. Create a Pull Request on GitHub from your feature branch to `develop`.
+
+## Development Scripts
+
+Our project uses npm scripts for various development tasks. Here are the main scripts you'll use:
+
+### `npm run dev`
+
+Runs the app in development mode. Use this for active development.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The page will reload if you make edits.
+- You will also see any lint errors in the console.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.
+- It correctly bundles React in production mode and optimizes the build for the best performance.
+- The build is minified and the filenames include the hashes.
+
+### `npm start`
+
+Runs the app in production mode.
+- Use this to test the production build locally.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run lint`
+
+Lints the codebase using ESLint.
+- This helps maintain code quality and consistency.
+- Run this before committing to ensure your code meets our style guidelines.
+
+## Best Practices
+
+1. Always create a new feature branch for your work.
+2. Keep your feature branches short-lived and focused on a single task or feature.
+3. Run `npm run lint` before committing to ensure code quality.
+4. Write unit tests for new features and run all tests before creating a Pull Request.
+5. Keep your local `develop` branch up-to-date by regularly pulling from the remote.
+
+For more information on contributing to this project, please see [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Repository Structure
 
 Our project uses a simplified Git Flow with the following main branches:
